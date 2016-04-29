@@ -2,16 +2,15 @@ import java.util.ArrayList;
 
 public class Word {
   private String mTerm;
+  private static ArrayList<Word> everyWord = new ArrayList<Word>();
   private int mID;
-  private static ArrayList<Word> instances = new ArrayList<Word>();
 
 
 
   public Word (String term) {
     mTerm = term;
-    mID = instances.size();
-    instances.add(this);
-
+    everyWord.add(this);
+    mID = everyWord.size();
   }
 
   public String getTerm() {
@@ -19,11 +18,23 @@ public class Word {
   }
 
   public static ArrayList<Word> all() {
-    return instances;
+    return everyWord;
+  }
+
+  public static void clear() {
+    everyWord.clear();
   }
 
   public int getID() {
     return mID;
   }
+
+  public static Word find(int id) {
+  try {
+    return everyWord.get(id - 1);
+  } catch (IndexOutOfBoundsException exception) {
+    return null;
+  }
+ }
 
 }
