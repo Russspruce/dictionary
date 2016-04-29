@@ -2,19 +2,16 @@
 
 #### _A user made dictionary, 4/29/2016_
 
-#### By _**{Andrew Russo}**_
+#### By _**Andrew Russo**_
 
 ## Description
 
-_{[Add info here]... demonstrating my skills at coding in HTML, CSS, and Bootstrap.}_
+_A user made dictionary _
 
 ## Setup/Installation Requirements
 
 * _To install, go to GitHub_
 * _to list setup instructions_
-
-
-_{Description with more depth here.}_
 
 ## Known Bugs
 
