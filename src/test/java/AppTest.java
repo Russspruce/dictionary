@@ -24,4 +24,13 @@ public class AppTest extends FluentTest {
     goTo("http://localhost:4567/");
     assertThat(pageSource()).contains("Dictionary");
   }
+
+  @Test
+  public void wordIsSubmittedTest() {
+    goTo("http://localhost:4567/");
+    click("a", withText("Submit New Word"));
+    fill("#term").with("frindle");
+    submit(".btn");
+    assertThat(pageSource()).contains("word has been accepted");
+  }
 }

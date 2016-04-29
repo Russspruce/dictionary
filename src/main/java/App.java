@@ -15,5 +15,19 @@ public class App {
       model.put("template", "templates/index.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
+
+    get("/words/new", (request, response) -> {
+      HashMap<String, Object> model = new HashMap<String, Object>();
+      model.put("template", "templates/word-form.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
+    post("/words", (request, response) -> {
+      HashMap<String, Object> model = new HashMap<String, Object>();
+      String term = request.queryParams("term");
+      Word newWord = new Word(term);
+      model.put("template", "templates/word-success.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
   }
 }

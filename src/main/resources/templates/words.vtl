@@ -1,0 +1,7 @@
+<h1>Millennial Dictionary</h1>
+<ul>
+  #foreach ($word in $words)
+   <li><a href="/words/$word.getID()">$word.getSummary()</a></li>
+  #end
+</ul>
+<a href="/words/new">Submit New Words</a>
