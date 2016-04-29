@@ -7,7 +7,7 @@ public class Definition {
     mSummary = summary;
   }
 
-  public String summary() {
+  public String getSummary() {
     return mSummary;
   }
 
