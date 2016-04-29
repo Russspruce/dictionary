@@ -8,4 +8,10 @@ public class WordTest {
     Word myWord = new Word("Frindle");
     assertEquals(true, myWord instanceof Word);
   }
+
+  @Test
+  public void Word_seeIfWordIsRead_Frindle() {
+    Word myWord = new Word("Frindle");
+    assertEquals("Frindle", myWord.getTerm());
+  }
 }
