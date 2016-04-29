@@ -6,7 +6,7 @@
 
 ## Description
 
-_A user made dictionary _
+_A user made dictionary that will allow users to be able to enter in a word and definition to be stored and called on whenever the user sees fit._
 
 ## Setup/Installation Requirements
 
