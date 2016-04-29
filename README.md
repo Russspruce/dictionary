@@ -1,6 +1,6 @@
-# _{- - - - -.html}_
+# Dictionary
 
-#### _{put info here.}, {X/X/2016}_
+#### _A user made dictionary, 4/29/2016_
 
 #### By _**{Andrew Russo}**_
 
