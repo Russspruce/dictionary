@@ -49,7 +49,7 @@ public class WordTest {
   }
 
   @Test
-  public void find_returnsNullWhenNoTaskFound_null() {
+  public void find_returnsNullWhenNoWordFound_null() {
     assertTrue(Word.find(999) == null);
 }
 }
