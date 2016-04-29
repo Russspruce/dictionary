@@ -22,4 +22,10 @@ public class WordTest {
     assertTrue(Word.all().contains(firstWord));
     assertTrue(Word.all().contains(secondWord));
   }
+
+  @Test
+  public void word_getIDofWord_1(){
+    Word myWord = new Word("Frindle");
+    assertEquals(1, myWord.getID());
+  }
 }
