@@ -1,38 +1,37 @@
 import java.util.ArrayList;
 
 public class Definition {
-  private String mSummary;
+  private String mWordDefinition;
   private static ArrayList<Definition> glossary = new ArrayList<Definition>();
-  private int mID;
+  private int mId;
 
-  public Definition(String summary){
-    mSummary = summary;
+  public Definition(String wordDefinition) {
+    mWordDefinition = wordDefinition;
     glossary.add(this);
-    mID = glossary.size();
+    mId = glossary.size();
   }
 
-  public String getSummary() {
-    return mSummary;
+  public String getDefinition() {
+    return mWordDefinition;
   }
 
-  public static ArrayList<Definition> all(){
+  public static ArrayList<Definition> all() {
     return glossary;
-  }
-
-  public int getID(){
-    return mID;
   }
 
   public static void clear() {
     glossary.clear();
   }
 
+  public int getId() {
+    return mId;
+  }
 
   public static Definition find(int id) {
-    try{
+    try {
       return glossary.get(id - 1);
     } catch (IndexOutOfBoundsException exception) {
       return null;
     }
- }
+  }
 }

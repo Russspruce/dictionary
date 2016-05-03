@@ -2,15 +2,15 @@ import java.util.ArrayList;
 
 public class Word {
   private String mTerm;
-  private static ArrayList<Word> everyWord = new ArrayList<Word>();
-  private int mID;
-
-
+  private static ArrayList<Word> everyWords = new ArrayList<Word>();
+  private int mId;
+  private ArrayList<Definition> mDefinitions;
 
   public Word (String term) {
     mTerm = term;
-    everyWord.add(this);
-    mID = everyWord.size();
+    everyWords.add(this);
+    mId = everyWords.size();
+    mDefinitions = new ArrayList<Definition>();
   }
 
   public String getTerm() {
@@ -18,23 +18,30 @@ public class Word {
   }
 
   public static ArrayList<Word> all() {
-    return everyWord;
+    return everyWords;
   }
 
   public static void clear() {
-    everyWord.clear();
+    everyWords.clear();
   }
 
-  public int getID() {
-    return mID;
+  public int getId() {
+    return mId;
   }
 
   public static Word find(int id) {
-  try {
-    return everyWord.get(id - 1);
-  } catch (IndexOutOfBoundsException exception) {
-    return null;
+    try {
+      return everyWords.get(id - 1);
+    } catch (IndexOutOfBoundsException exception) {
+      return null;
+    }
   }
- }
 
+  public ArrayList<Definition> getDefinitions() {
+    return mDefinitions;
+  }
+
+  public void addDefinition(Definition def) {
+    mDefinitions.add(def);
+  }
 }

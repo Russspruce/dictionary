@@ -28,13 +28,6 @@ public class WordTest {
     assertTrue(Word.all().contains(secondWord));
   }
 
-  // @Test
-  // public void clear_allWordsRemoved_0() {
-  //   Word firstWord = new Word("Frindle");
-  //   Word.clear();
-  //   assertEquals(0, Word.all().size());
-  // }
-
   @Test
   public void word_getIDofWord_1(){
     Word myWord = new Word("Frindle");

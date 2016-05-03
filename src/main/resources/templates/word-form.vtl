@@ -1,7 +1,12 @@
-<form action=/words method="post">
-  <label for="term">Word Input</label>
-  <input id="term" name="term" type="text">
+<h1>Add word to Archive</h1>
 
-  <button type="submit" class="btn btn-default">Submit Word</button>
+<h2>What word would you like to add?</h2>
 
+<form action="/words" method="post">
+  <label for="word"></label>
+  <input id="word" name="word" type="text" required>
+
+  <div>
+    <button type="submit" class="btn">Add Word</button>
+  </div>
 </form>

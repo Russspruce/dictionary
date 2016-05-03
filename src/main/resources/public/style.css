@@ -1,0 +1,21 @@
+body {
+  background-color: #D7BFA3;
+  text-align: center;
+}
+
+.formFill {
+  background-color: #D7BFA3;
+}
+
+h1, h2 {
+  color: #164BBF;
+  font-family: Rationale;
+}
+
+a:link {
+  color: #7685B1;
+}
+
+.word_definition {
+  text-align: left;
+}
