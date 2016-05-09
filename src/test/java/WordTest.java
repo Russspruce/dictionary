@@ -6,6 +6,7 @@ public class WordTest {
   @After
   public void tearDown() {
     Word.clear();
+    Definition.clear();
   }
 
   @Test
@@ -31,14 +32,14 @@ public class WordTest {
   @Test
   public void word_getIDofWord_1(){
     Word myWord = new Word("Frindle");
-    assertEquals(1, myWord.getID());
+    assertEquals(1, myWord.getId());
   }
 
   @Test
   public void find_determineIfWordisSameID_secondWord() {
     Word firstWord = new Word("Frindle");
     Word secondWord = new Word("Rummage");
-    assertEquals(Word.find(secondWord.getID()), secondWord);
+    assertEquals(Word.find(secondWord.getId()), secondWord);
   }
 
   @Test

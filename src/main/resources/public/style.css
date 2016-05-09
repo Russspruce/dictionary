@@ -3,6 +3,10 @@ body {
   text-align: center;
 }
 
+.jumbotron {
+  background-color: #A7A2AA;
+}
+
 .formFill {
   background-color: #D7BFA3;
 }
@@ -18,4 +22,9 @@ a:link {
 
 .word_definition {
   text-align: left;
+  font:
+}
+
+.hold {
+  border
 }

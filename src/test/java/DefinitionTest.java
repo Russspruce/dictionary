@@ -3,6 +3,12 @@ import static org.junit.Assert.*;
 
 public class DefinitionTest {
 
+  @After
+  public void tearDown() {
+    Word.clear();
+    Definition.clear();
+  }
+
   @Test
   public void define_definitionIsPresent_true() {
     Definition myDefinition = new Definition("A pen.");
@@ -12,7 +18,7 @@ public class DefinitionTest {
   @Test
   public void define_definitionIsStored_string() {
     Definition myDefinition = new Definition("A pen.");
-    assertEquals("A pen.", myDefinition.getSummary());
+    assertEquals("A pen.", myDefinition.getDefinition());
   }
 
   @Test
@@ -33,14 +39,14 @@ public class DefinitionTest {
  @Test
  public void getID_definitionWithAnID_1() {
    Definition myDefinition = new Definition("A pen.");
-   assertEquals(1, myDefinition.getID());
+   assertEquals(1, myDefinition.getId());
  }
 
  @Test
  public void find_returnDefinitionWithSameID_second() {
    Definition firstDefiniton = new Definition("A pen.");
    Definition secondDefinition = new Definition("Writing utensil.");
-   assertEquals(Definition.find(secondDefinition.getID()), secondDefinition);
+   assertEquals(Definition.find(secondDefinition.getId()), secondDefinition);
  }
 
  @Test

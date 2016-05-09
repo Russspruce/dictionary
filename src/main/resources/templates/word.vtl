@@ -1,10 +1,15 @@
-<h1>$word.getTerm()</h1>
-
+<div class="container">
+  <div class="jumbotron">
+    <h1>$word.getTerm()</h1>
+  </div>
+</div>
+<br>
+<div class="word_definition">
   <ul>
     #foreach($definition in $word.getDefinitions())
     <li>$definition.getDefinition()</li>
     #end
   </ul>
-
+</div>
   <h3><a href="/words/$word.getId()/definitions/new">Add a New Definition</a></h3>
   <h3><a href="/words">Archive</a></h3>

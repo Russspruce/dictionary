@@ -29,7 +29,7 @@ public class AppTest extends FluentTest {
   public void wordIsSubmittedTest() {
     goTo("http://localhost:4567/");
     click("a", withText("Submit New Word"));
-    fill("#term").with("frindle");
+    fill("#word").with("frindle");
     submit(".btn");
     assertThat(pageSource()).contains("word has been accepted");
   }
@@ -37,7 +37,7 @@ public class AppTest extends FluentTest {
   @Test
   public void wordIsDisplayedTest() {
     goTo("http://localhost:4567/words/new");
-    fill("#term").with("Frindle");
+    fill("#word").with("Frindle");
     submit(".btn");
     click("a", withText("Review Words"));
     assertThat(pageSource()).contains("Frindle");
@@ -46,11 +46,11 @@ public class AppTest extends FluentTest {
   @Test
     public void wordDefinitionFormIsDisplayed() {
       goTo("http://localhost:4567/words/new");
-      fill("#term").with("Frindle");
+      fill("#word").with("Frindle");
       submit(".btn");
       click("a", withText("Review Words"));
-      click("a", withText("Frindle"));
-      click("a", withText("Add a definition"));
+      goTo("http://localhost:4567/words/1");
+      click("a", withText("Add a New Definition"));
       assertThat(pageSource()).contains("Add a definition to Frindle");
     }
 }
